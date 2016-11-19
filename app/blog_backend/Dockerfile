@@ -1,3 +1,3 @@
-shevchenkoav/ruby:2.3
+FROM shevchenkoav/ruby:2.3
 
 CMD ["/usr/local/bundle/bin/puma"]
