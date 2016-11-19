@@ -12,6 +12,12 @@ stage 'Checkout'
 stage 'Build Image'
   //Packaging the image into a Docker image
   def pkg = docker.build ("${env.DOCKERHUB_USER}/mongodb", 'app/mongodb')
+  
+  stage('Infra tests')
+  pkg.inside {
+    sh 'mongod --version | grep "db version" | grep 3.2.6'
+  }
+
 
 //Допишем stage с тестами после этого комментария
 
