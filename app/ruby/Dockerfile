@@ -1,4 +1,4 @@
-shevchenkoav/ubuntu:16.04
+from shevchenkoav/ubuntu:16.04
 
 # skip installing gem documentation
 RUN mkdir -p /usr/local/etc \
